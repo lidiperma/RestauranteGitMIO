@@ -41,7 +41,7 @@ public static void insertarCocinero(int idCocinero,String nombre,String apellido
     consultaSQL += "('" + idCocinero + "','" + nombre + "','" + apellido + "')";
     sentencia.executeUpdate(consultaSQL);
     sentencia.close();
-    
+    ConexionRestaurante.cerrarConexion();
 }
 
 public static void procesarPeticionCocinero(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
