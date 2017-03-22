@@ -5,6 +5,7 @@
  */
 package bo.cocinero.restaurante;
 
+import dao.cocinero.restaurante.DaoCocinero;
 import static dao.cocinero.restaurante.DaoCocinero.insertarCocinero;
 import entidades.Cocinero;
 import java.io.IOException;
@@ -16,13 +17,13 @@ import javax.servlet.http.HttpServletResponse;
 public class BoCocinero {
     
     
-    public static void procesarPeticionCocinero(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
+    public static void procesarPeticionInsertarCocinero(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
     
     Cocinero masterChef=new Cocinero();
     masterChef.setIdCocinero(Integer.parseInt(request.getParameter("idcocinero")));
     masterChef.setNombre(request.getParameter("nombre"));
     masterChef.setApellido(request.getParameter("apellido"));
-    insertarCocinero(masterChef.getIdCocinero(), masterChef.getNombre(), masterChef.getApellido());
+    DaoCocinero.insertarCocinero(masterChef.getIdCocinero(), masterChef.getNombre(), masterChef.getApellido());
     response.sendRedirect("/Restaurante/mostrarServletCocinero");
     
     
