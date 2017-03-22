@@ -30,7 +30,7 @@ public class FormularioServletCocinero extends HttpServlet {
         
        //ConexionRestaurante.procesarPeticionCocinero(request, response);
         
-        BoCocinero.procesarPeticionCocinero(request, response);
+        BoCocinero.procesarPeticionInsertarCocinero(request, response);
         /*ConexionRestaurante.procesarPeticion(request);
         /*response.sendRedirect("/Restaurante/mostrarServletCocinero");
         /*response.setContentType("text/html;charset=UTF-8");
