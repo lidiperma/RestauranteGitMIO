@@ -31,12 +31,12 @@ public class LogRestaurante extends HttpServlet {
         if (verificarUsuario == true) {
                 //esta variable nos sirve para comprobar 
             //si el usuario esta logeado en otros sevlets
-            boolean log = true;
+            
             HttpSession sesion_login = request.getSession();
             //guardo en la sesion 
             sesion_login.setAttribute("login_usuario", user_login);
             sesion_login.setAttribute("login_password", pass_login);
-            sesion_login.setAttribute("ok", log);
+            sesion_login.setAttribute("ok", verificarUsuario);
 
             response.sendRedirect("/Restaurante/altas.htm");
         } else {
