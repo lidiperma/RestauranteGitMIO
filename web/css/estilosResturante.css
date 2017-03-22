@@ -1,0 +1,14 @@
+legend,label{
+    font-style: italic;
+    font-weight: bold;
+}
+
+p{
+    text-align: left;
+    width: 300px;
+}
+#restaurante{
+    margin-left: 20px;
+    width: 985px;
+    height: 350px;
+}
