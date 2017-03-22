@@ -6,6 +6,7 @@
 package controladoresServlet;
 
 import Utilidades.ConexionRestaurante;
+import bo.cocinero.restaurante.BoCocinero;
 import dao.cocinero.restaurante.DaoCocinero;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,7 +30,7 @@ public class FormularioServletCocinero extends HttpServlet {
         
        //ConexionRestaurante.procesarPeticionCocinero(request, response);
         
-        DaoCocinero.procesarPeticionCocinero(request, response);
+        BoCocinero.procesarPeticionCocinero(request, response);
         /*ConexionRestaurante.procesarPeticion(request);
         /*response.sendRedirect("/Restaurante/mostrarServletCocinero");
         /*response.setContentType("text/html;charset=UTF-8");
