@@ -44,16 +44,6 @@ public static void insertarCocinero(int idCocinero,String nombre,String apellido
     ConexionRestaurante.cerrarConexion();
 }
 
-public static void procesarPeticionCocinero(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
-    
-    Cocinero masterChef=new Cocinero();
-    masterChef.setIdCocinero(Integer.parseInt(request.getParameter("idcocinero")));
-    masterChef.setNombre(request.getParameter("nombre"));
-    masterChef.setApellido(request.getParameter("apellido"));
-    insertarCocinero(masterChef.getIdCocinero(), masterChef.getNombre(), masterChef.getApellido());
-    response.sendRedirect("/Restaurante/mostrarServletCocinero");
-    
-    
-}
+
     
 }
